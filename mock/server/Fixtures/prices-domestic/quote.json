@@ -1,0 +1,7 @@
+{
+  "quotes": [
+    { "service": "Ground Advantage", "price": 7.85, "currency": "USD", "deliveryStandard": "2-5" },
+    { "service": "Priority Mail", "price": 10.65, "currency": "USD", "deliveryStandard": "1-3" }
+  ]
+}
+

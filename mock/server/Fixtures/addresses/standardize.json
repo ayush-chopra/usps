@@ -1,0 +1,13 @@
+{
+  "addresses": [
+    {
+      "addressLine1": "475 L'Enfant Plaza SW",
+      "addressLine2": null,
+      "city": "Washington",
+      "state": "DC",
+      "zipCode": "20260",
+      "valid": true
+    }
+  ]
+}
+

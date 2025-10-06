@@ -1,0 +1,7 @@
+{
+  "quotes": [
+    { "service": "GXG", "price": 64.50, "currency": "USD", "deliveryStandard": "3-5" },
+    { "service": "Priority Mail International", "price": 54.20, "currency": "USD", "deliveryStandard": "6-10" }
+  ]
+}
+
