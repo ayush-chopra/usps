@@ -1,7 +1,0 @@
-{
-  "options": [
-    { "service": "Ground Advantage", "price": 7.85, "currency": "USD", "estimatedDays": 3 },
-    { "service": "Priority Mail", "price": 10.65, "currency": "USD", "estimatedDays": 2 }
-  ]
-}
-
