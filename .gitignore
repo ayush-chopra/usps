@@ -1,0 +1,68 @@
+# .NET
+bin/
+obj/
+out/
+*.user
+*.suo
+*.cache
+*.dll
+*.exe
+*.pdb
+
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# User secrets
+appsettings.Development.json
+appsettings.Local.json
+*.usersecrets
+
+# Build artifacts
+out/
+dist/
+build/
+
+# IDE
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+.env.production
+
+# Test results
+TestResults/
+coverage/
+*.coverage
+*.testlog
+
+# Temporary files
+*.tmp
+*.temp
+*.log
+
+# Generated files that shouldn't be committed
+test-label.pdf
+mock/server/bin/
+mock/server/obj/
+samples/Usps.Samples/bin/
+samples/Usps.Samples/obj/
+src/Usps.V3/bin/
+src/Usps.V3/obj/
+tests/Usps.V3.Tests/bin/
+tests/Usps.V3.Tests/obj/
+
+# Claude
+.claude/
