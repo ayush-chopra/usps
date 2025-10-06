@@ -1,0 +1,51 @@
+name: ci
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Cache NuGet
+        uses: actions/cache@v4
+        with:
+          path: ~/.nuget/packages
+          key: ${{ runner.os }}-nuget-${{ hashFiles('**/*.csproj') }}
+          restore-keys: |
+            ${{ runner.os }}-nuget-
+      - name: Restore
+        run: dotnet restore Usps.sln
+      - name: Build (Release)
+        run: dotnet build Usps.sln -c Release --no-restore
+      - name: Test
+        run: dotnet test Usps.sln -c Release --no-build --collect:"XPlat Code Coverage"
+
+  integration-tests:
+    if: ${{ secrets.USPS_CLIENT_ID && secrets.USPS_CLIENT_SECRET }}
+    runs-on: ubuntu-latest
+    env:
+      USPS_ENV: Tem
+      USPS_CLIENT_ID: ${{ secrets.USPS_CLIENT_ID }}
+      USPS_CLIENT_SECRET: ${{ secrets.USPS_CLIENT_SECRET }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup .NET 8
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Restore
+        run: dotnet restore Usps.sln
+      - name: Build
+        run: dotnet build Usps.sln -c Release --no-restore
+      - name: Test (Integration category)
+        run: dotnet test Usps.sln -c Release --no-build --filter "Category=Integration"
+
