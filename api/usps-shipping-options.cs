@@ -1,9 +1,12 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Runtime.Caching;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 using NLog;
@@ -47,30 +50,35 @@ namespace UspsProcessor
                 string token = await ValidateRestTokenAsync();
                 if (!string.IsNullOrWhiteSpace(token))
                 {
-                    string payload = JsonConvert.SerializeObject(request, new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+                    string payload = JsonConvert.SerializeObject(
+                        request,
+                        new JsonSerializerSettings { NullValueHandling = NullValueHandling.Ignore });
+
                     UspsGenericResponse genericResponse = await MakeRestRequestAsync("shipping-options", payload);
                     if (genericResponse.isSuccess)
                     {
                         if (!string.IsNullOrWhiteSpace(genericResponse.message))
                         {
-                            UspsShippingOptionsResponse shippingResponse = JsonConvert.DeserializeObject<UspsShippingOptionsResponse>(genericResponse.message);
-                            if (shippingResponse != null && shippingResponse.options != null && shippingResponse.options.Count > 0)
+                            try
                             {
-                                foreach (UspsShippingOption option in shippingResponse.options)
+                                UspsShippingOptionsResponse? shippingResponse = JsonConvert.DeserializeObject<UspsShippingOptionsResponse>(genericResponse.message);
+                                List<ShippingOptionQuote> mappedQuotes = MapShippingOptions(shippingResponse, request).ToList();
+
+                                if (mappedQuotes.Count > 0)
                                 {
-                                    quoteResponse.options.Add(new ShippingOptionQuote
-                                    {
-                                        service = option.service,
-                                        price = option.price,
-                                        currency = string.IsNullOrWhiteSpace(option.currency) ? "USD" : option.currency,
-                                        estimatedDays = option.estimatedDays
-                                    });
+                                    quoteResponse.options.AddRange(mappedQuotes);
+                                }
+                                else
+                                {
+                                    quoteResponse.isSuccess = false;
+                                    quoteResponse.errorDesc = "No shipping options returned";
                                 }
                             }
-                            else
+                            catch (JsonException jx)
                             {
                                 quoteResponse.isSuccess = false;
-                                quoteResponse.errorDesc = "No shipping options returned";
+                                quoteResponse.errorDesc = "Unable to parse shipping options response";
+                                _logger.Error("USPS Shipping Options Parse Error = {0}", jx.Message);
                             }
                         }
                         else
@@ -171,12 +179,13 @@ namespace UspsProcessor
                 }
                 else if (method == "shipping-options")
                 {
-                    url = string.Format("{0}shippingoptions/v3/quote", _url);
+                    url = string.Format("{0}shipments/v3/options/search", _url);
                     webRequest = (HttpWebRequest)WebRequest.Create(url);
                     string token = MemoryCache.Default["uspsToken"] as string ?? string.Empty;
                     webRequest.Headers.Add("Authorization", "Bearer " + token);
                     webRequest.ContentType = "application/json";
                     webRequest.Method = "POST";
+                    webRequest.Accept = "application/json";
                 }
                 else
                 {
@@ -229,21 +238,243 @@ namespace UspsProcessor
             return response;
         }
         #endregion
+
+        private static IEnumerable<ShippingOptionQuote> MapShippingOptions(UspsShippingOptionsResponse? response, ShippingOptionsQuoteRequest request)
+        {
+            if (response?.pricingOptions == null)
+            {
+                yield break;
+            }
+
+            string? mailingDate = request?.PackageDescription?.MailingDate;
+
+            foreach (UspsShippingPricingOption? pricingOption in response.pricingOptions)
+            {
+                if (pricingOption?.shippingOptions == null)
+                {
+                    continue;
+                }
+
+                foreach (UspsShippingOption? shippingOption in pricingOption.shippingOptions)
+                {
+                    if (shippingOption?.rateOptions == null || shippingOption.rateOptions.Count == 0)
+                    {
+                        continue;
+                    }
+
+                    foreach (UspsShippingRateOption? rateOption in shippingOption.rateOptions)
+                    {
+                        if (rateOption == null)
+                        {
+                            continue;
+                        }
+
+                        decimal price = rateOption.totalPrice
+                            ?? rateOption.totalBasePrice
+                            ?? rateOption.rates?.FirstOrDefault()?.price
+                            ?? 0m;
+
+                        string currency = rateOption.currencyCode
+                            ?? rateOption.rates?.FirstOrDefault()?.currency
+                            ?? "USD";
+
+                        string service = !string.IsNullOrWhiteSpace(shippingOption.mailClass)
+                            ? shippingOption.mailClass
+                            : rateOption.rates?.FirstOrDefault()?.description
+                                ?? "USPS";
+
+                        int estimatedDays = EstimateDays(rateOption.commitment, mailingDate);
+
+                        yield return new ShippingOptionQuote
+                        {
+                            service = service,
+                            price = price,
+                            currency = string.IsNullOrWhiteSpace(currency) ? "USD" : currency,
+                            estimatedDays = estimatedDays
+                        };
+                    }
+                }
+            }
+        }
+
+        private static int EstimateDays(UspsShippingCommitment? commitment, string? mailingDate)
+        {
+            if (commitment == null)
+            {
+                return 0;
+            }
+
+            if (commitment.estimatedDays.HasValue && commitment.estimatedDays.Value >= 0)
+            {
+                return commitment.estimatedDays.Value;
+            }
+
+            if (!string.IsNullOrWhiteSpace(commitment.name))
+            {
+                Match match = Regex.Match(commitment.name, "(\\d+)");
+                if (match.Success && int.TryParse(match.Value, NumberStyles.Integer, CultureInfo.InvariantCulture, out int parsedDays))
+                {
+                    return parsedDays;
+                }
+            }
+
+            if (!string.IsNullOrWhiteSpace(commitment.scheduleDeliveryDate) && !string.IsNullOrWhiteSpace(mailingDate))
+            {
+                if (DateTime.TryParse(mailingDate, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal, out DateTime mailingDt)
+                    && DateTime.TryParse(commitment.scheduleDeliveryDate, CultureInfo.InvariantCulture, DateTimeStyles.AssumeUniversal, out DateTime deliveryDt))
+                {
+                    int days = (int)Math.Round((deliveryDt.Date - mailingDt.Date).TotalDays);
+                    if (days >= 0)
+                    {
+                        return days;
+                    }
+                }
+            }
+
+            return 0;
+        }
     }
 
     public sealed class ShippingOptionsQuoteRequest
     {
-        [JsonProperty("originZip")]
-        public string OriginZip { get; set; } = string.Empty;
+        [JsonProperty("pricingOptions")]
+        public List<ShippingOptionsPricingOption>? PricingOptions { get; set; }
 
-        [JsonProperty("destinationZip")]
-        public string DestinationZip { get; set; } = string.Empty;
+        [JsonProperty("originZIPCode")]
+        public string OriginZIPCode { get; set; } = string.Empty;
 
-        [JsonProperty("weightOz")]
-        public decimal WeightOz { get; set; }
+        [JsonProperty("destinationZIPCode")]
+        public string DestinationZIPCode { get; set; } = string.Empty;
 
-        [JsonProperty("dimensions")]
-        public PackageDimensions? Dimensions { get; set; }
+        [JsonProperty("originCountryCode")]
+        public string? OriginCountryCode { get; set; }
+
+        [JsonProperty("destinationCountryCode")]
+        public string? DestinationCountryCode { get; set; }
+
+        [JsonProperty("packageDescription")]
+        public ShippingPackageDescription? PackageDescription { get; set; } = new ShippingPackageDescription();
+
+        [JsonIgnore]
+        public string OriginZip
+        {
+            get => OriginZIPCode;
+            set => OriginZIPCode = value;
+        }
+
+        [JsonIgnore]
+        public string DestinationZip
+        {
+            get => DestinationZIPCode;
+            set => DestinationZIPCode = value;
+        }
+
+        [JsonIgnore]
+        public decimal WeightOz
+        {
+            get => PackageDescription?.Weight ?? 0m;
+            set => EnsurePackageDescription().Weight = value;
+        }
+
+        [JsonIgnore]
+        public PackageDimensions? Dimensions
+        {
+            get
+            {
+                if (PackageDescription == null)
+                {
+                    return null;
+                }
+
+                if (PackageDescription.Length.HasValue
+                    || PackageDescription.Width.HasValue
+                    || PackageDescription.Height.HasValue)
+                {
+                    return new PackageDimensions
+                    {
+                        LengthIn = PackageDescription.Length ?? 0m,
+                        WidthIn = PackageDescription.Width ?? 0m,
+                        HeightIn = PackageDescription.Height ?? 0m
+                    };
+                }
+
+                return null;
+            }
+            set
+            {
+                ShippingPackageDescription package = EnsurePackageDescription();
+                if (value == null)
+                {
+                    package.Length = null;
+                    package.Width = null;
+                    package.Height = null;
+                }
+                else
+                {
+                    package.Length = value.LengthIn;
+                    package.Width = value.WidthIn;
+                    package.Height = value.HeightIn;
+                }
+            }
+        }
+
+        private ShippingPackageDescription EnsurePackageDescription()
+        {
+            if (PackageDescription == null)
+            {
+                PackageDescription = new ShippingPackageDescription();
+            }
+
+            return PackageDescription;
+        }
+    }
+
+    public sealed class ShippingOptionsPricingOption
+    {
+        [JsonProperty("priceType")]
+        public string? PriceType { get; set; }
+
+        [JsonProperty("paymentAccount")]
+        public ShippingOptionsPaymentAccount? PaymentAccount { get; set; }
+    }
+
+    public sealed class ShippingOptionsPaymentAccount
+    {
+        [JsonProperty("accountType")]
+        public string? AccountType { get; set; }
+
+        [JsonProperty("accountNumber")]
+        public string? AccountNumber { get; set; }
+    }
+
+    public sealed class ShippingPackageDescription
+    {
+        [JsonProperty("weight")]
+        public decimal? Weight { get; set; }
+
+        [JsonProperty("length")]
+        public decimal? Length { get; set; }
+
+        [JsonProperty("height")]
+        public decimal? Height { get; set; }
+
+        [JsonProperty("width")]
+        public decimal? Width { get; set; }
+
+        [JsonProperty("girth")]
+        public decimal? Girth { get; set; }
+
+        [JsonProperty("mailClass")]
+        public string? MailClass { get; set; }
+
+        [JsonProperty("extraServices")]
+        public List<int>? ExtraServices { get; set; }
+
+        [JsonProperty("mailingDate")]
+        public string? MailingDate { get; set; }
+
+        [JsonProperty("packageValue")]
+        public decimal? PackageValue { get; set; }
     }
 
     public sealed class ShippingOptionsQuoteResponse
@@ -263,14 +494,103 @@ namespace UspsProcessor
 
     internal sealed class UspsShippingOptionsResponse
     {
-        public List<UspsShippingOption> options { get; set; } = new List<UspsShippingOption>();
+        [JsonProperty("pricingOptions")]
+        public List<UspsShippingPricingOption>? pricingOptions { get; set; }
+    }
+
+    internal sealed class UspsShippingPricingOption
+    {
+        [JsonProperty("shippingOptions")]
+        public List<UspsShippingOption>? shippingOptions { get; set; }
     }
 
     internal sealed class UspsShippingOption
     {
-        public string service { get; set; } = string.Empty;
-        public decimal price { get; set; }
-        public string currency { get; set; } = "USD";
-        public int estimatedDays { get; set; }
+        [JsonProperty("mailClass")]
+        public string? mailClass { get; set; }
+
+        [JsonProperty("rateOptions")]
+        public List<UspsShippingRateOption>? rateOptions { get; set; }
+    }
+
+    internal sealed class UspsShippingRateOption
+    {
+        [JsonProperty("commitment")]
+        public UspsShippingCommitment? commitment { get; set; }
+
+        [JsonProperty("totalPrice")]
+        public decimal? totalPrice { get; set; }
+
+        [JsonProperty("totalBasePrice")]
+        public decimal? totalBasePrice { get; set; }
+
+        [JsonProperty("currencyCode")]
+        public string? currencyCode { get; set; }
+
+        [JsonProperty("rates")]
+        public List<UspsShippingRate>? rates { get; set; }
+
+        [JsonProperty("extraServices")]
+        public List<UspsShippingExtraService>? extraServices { get; set; }
+    }
+
+    internal sealed class UspsShippingCommitment
+    {
+        [JsonProperty("name")]
+        public string? name { get; set; }
+
+        [JsonProperty("scheduleDeliveryDate")]
+        public string? scheduleDeliveryDate { get; set; }
+
+        [JsonProperty("estimatedDays")]
+        public int? estimatedDays { get; set; }
+    }
+
+    internal sealed class UspsShippingRate
+    {
+        [JsonProperty("description")]
+        public string? description { get; set; }
+
+        [JsonProperty("price")]
+        public decimal? price { get; set; }
+
+        [JsonProperty("currency")]
+        public string? currency { get; set; }
+
+        [JsonProperty("zone")]
+        public string? zone { get; set; }
+
+        [JsonProperty("weight")]
+        public decimal? weight { get; set; }
+
+        [JsonProperty("dimensionalWeight")]
+        public decimal? dimensionalWeight { get; set; }
+
+        [JsonProperty("fees")]
+        public List<UspsShippingFee>? fees { get; set; }
+
+        [JsonProperty("SKU")]
+        public string? sku { get; set; }
+    }
+
+    internal sealed class UspsShippingFee
+    {
+        [JsonProperty("description")]
+        public string? description { get; set; }
+
+        [JsonProperty("price")]
+        public decimal? price { get; set; }
+    }
+
+    internal sealed class UspsShippingExtraService
+    {
+        [JsonProperty("name")]
+        public string? name { get; set; }
+
+        [JsonProperty("price")]
+        public decimal? price { get; set; }
+
+        [JsonProperty("SKU")]
+        public string? sku { get; set; }
     }
 }

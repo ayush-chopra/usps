@@ -1,0 +1,2182 @@
+{
+  "timestamp": "2025-10-09T04:52:19.670623Z",
+  "envFile": ".env.local",
+  "baseUrl": "https://apis-tem.usps.com/",
+  "authUrl": "https://apis-tem.usps.com/oauth2/v3/token",
+  "shippingOptionsUrl": "https://apis-tem.usps.com/shipments/v3/options/search",
+  "auth": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json",
+      "Content-Length": "2581",
+      "x-amzn-RequestId": "7615e884-edb0-4c7b-87fb-5683f9e31544",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Origin, Accept, Content-Type, Authorization, X-Forward-For, X-Requested-With, User-Agent",
+      "x-amzn-Remapped-content-length": "2581",
+      "x-request-id": "7057396d-9701-4c16-98c0-bea8593ac9a3",
+      "x-amz-apigw-id": "SKbcrEcgIAMESdg=",
+      "Access-Control-Allow-Methods": "GET, POST",
+      "Access-Control-Max-Age": "86400",
+      "x-amzn-Remapped-date": "Thu, 09 Oct 2025 04:52:19 GMT",
+      "Access-Control-Allow-Credentials": "true",
+      "Cache-Control": "max-age=0, no-cache, no-store",
+      "Pragma": "no-cache",
+      "Date": "Thu, 09 Oct 2025 04:52:20 GMT",
+      "Connection": "close",
+      "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains ; preload",
+      "Akamai-GRN": "0.9f6e3f17.1759985539.1acfee51"
+    },
+    "body": {
+      "access_token": "eyJraWQiOiJIdWpzX2F6UnFJUzBpSE5YNEZIRk96eUwwdjE4RXJMdjNyZDBoalpNUnJFIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJlbnRpdGxlbWVudHMiOltdLCJzdWIiOiI0NTI0MzE5MDQiLCJjcmlkIjoiMzk4NzE1NDIiLCJzdWJfaWQiOiI0NTI0MzE5MDQiLCJyb2xlcyI6W10sInBheW1lbnRfYWNjb3VudHMiOnsicGVybWl0cyI6W3sicGVybWl0TnVtYmVyIjoiW10iLCJwZXJtaXRaSVAiOiIwMDAifV19LCJpc3MiOiJodHRwczovL2FwaXMtdGVtLnVzcHMuY29tIiwiY29udHJhY3RzIjp7InBheW1lbnRBY2NvdW50cyI6e30sInBlcm1pdHMiOlt7InBlcm1pdE51bWJlciI6IltdIiwicGVybWl0WklQIjoiMDAwIn1dfSwiYXVkIjpbInBheW1lbnRzIiwicHJpY2VzIiwic3Vic2NyaXB0aW9ucy10cmFja2luZyIsIm9yZ2FuaXphdGlvbnMiXSwiYXpwIjoiU1RjOXBobklqVUpPU0kzTEpjdmxveXE1b0UyQVRkZDc1SjRvMW5pNzJWcFRRekFhIiwibWFpbF9vd25lcnMiOlt7ImNyaWQiOiIzOTg3MTU0MiIsIm1pZHMiOiIifV0sInNjb3BlIjoiZG9tZXN0aWMtcHJpY2VzICBvYXV0aDItb2lkYyBhZGRyZXNzZXMgaW50ZXJuYXRpb25hbC1wcmljZXMgIHVzcHM6cGF5bWVudF9tZXRob2RzIG9wZW5pZCBzZXJ2aWNlLXN0YW5kYXJkcy1maWxlcyBzZXJ2aWNlLXN0YW5kYXJkcyBsb2NhdGlvbnMgIHVzcHM6TUlEcyBzaGlwbWVudHMiLCJjb21wYW55X25hbWUiOiJDTE9VRCA5IEVYUFJFU1MgTExDIiwiZXhwIjoxNzYwMDE0MzM5LCJpYXQiOjE3NTk5ODU1MzksImp0aSI6IjU2YzE2ZjQzLTdjNTUtNDFmNS05YTEyLTg5YjFjNThlNzlhNSJ9.I85G5OMKqGftjHfdiUDnOL-oohVcd2bE1Ja7hy5RotdOCeuFAKz_1vVHVHdCTMO9eAXfouibPUabvwy0SAFrBcF83XsIP74dASJyTaaueZlqbLhP8J4N_78e77b0W4CxQYpj0hB3yvYdJz5xQRyLStNC4ebS2H574Ry9V4U4Xyvqolia8GYnS0DC1Ao_cix9GyDDNXq0qI_pFQmQ0u4JtxgaRcA60pUuBuraFcFtZ321lUosSmmM62uZ0WMYqR81PQbDjYkegitHLEMPtsDotBayF-FJ3lFCRhCzXvQyqxOCuiUmAKFKoQQGQuKzAWe2w05TWMva4mGXcLdcqix81w",
+      "token_type": "Bearer",
+      "issued_at": 1759985539962,
+      "expires_in": 28799,
+      "status": "approved",
+      "scope": "domestic-prices  oauth2-oidc addresses international-prices  usps:payment_methods openid service-standards-files service-standards locations  usps:MIDs shipments",
+      "issuer": "https://apis-tem.usps.com",
+      "client_id": "STc9phnIjUJOSI3LJcvloyq5oE2ATdd75J4o1ni72VpTQzAa",
+      "application_name": "Cloud9_USPS_Integration",
+      "api_products": "[Public Access I]",
+      "public_key": "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS1NSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXVJSzRaUzd0T05QU0FMMzBHTzRPa3Q3N3Y5cHlIUkdPaE5DWDJKUkxMcEtFamNtUjFCMHg1TkszMmZNWlJoSjhTV0pVM05OMm5SYkpNcEladFZUSW51YWRjSENNaFNGMi9QRmRPaUVLZzgvZkRhYS9LemtnTXVJQjhudi9Nc01jMjZkeXovdjJRWHRLVU5HSnBoK2k0cTg2Y2xkbjlzSnM1YVZrbHFyREFSL1NpNEpIZEdqOVVTekdmdTg3bFNhUnpTVnZFMkxTbkpFWFY1ZVJpQ0pxbk90aTkvUEw5ek95UDlkQmJSZjBaQS9iWjZidFdleklwSzJuOFJhN0ZpcEZJZE9uYUkvYXdoY0hIVURNenlKT2NLYU4zSkRZZDhMTS83MGpCUEF4NUwrRHBUVFVHeVI5WFRXSThldVJEU2gveVU2MDlLN3dybDJRZ2NRMFl6N2hsUUlEQVFBQi0tLS0tRU5EIFBVQkxJQyBLRVktLS0tLQ=="
+    }
+  },
+  "shippingOptions": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json",
+      "Content-Length": "39223",
+      "x-amzn-RequestId": "0894fda7-004c-4753-b95b-4c89e1236684",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Origin, X-Requested-With, User-Agent, X-Forwarded-For, Accept, Content-Type, Authorization",
+      "x-amzn-Remapped-content-length": "39223",
+      "x-request-id": "5e6330f8-ccc4-4453-a5d8-c1d34cf77982",
+      "x-amz-apigw-id": "SKbcwEU-IAMEYaw=",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Max-Age": "3628800",
+      "x-amzn-Remapped-date": "Thu, 09 Oct 2025 04:52:19 GMT",
+      "Access-Control-Allow-Credentials": "true",
+      "Cache-Control": "max-age=0, no-cache, no-store",
+      "Pragma": "no-cache",
+      "Date": "Thu, 09 Oct 2025 04:52:20 GMT",
+      "Connection": "close",
+      "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains ; preload",
+      "Akamai-GRN": "0.a66e3f17.1759985540.18704ef1"
+    },
+    "body": {
+      "originZIPCode": "10018",
+      "destinationZIPCode": "95823",
+      "pricingOptions": [
+        {
+          "shippingOptions": [
+            {
+              "mailClass": "PRIORITY_MAIL_EXPRESS",
+              "rateOptions": [
+                {
+                  "commitment": {
+                    "name": "2 Days",
+                    "scheduleDeliveryDate": "2025-10-11",
+                    "guaranteedDelivery": true
+                  },
+                  "totalPrice": 28.95,
+                  "totalBasePrice": 28.95,
+                  "rates": [
+                    {
+                      "description": "Priority Mail Express Flat Rate Envelope",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 28.95,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL_EXPRESS",
+                      "productName": "Priority Mail Express Flat Rate Envelope",
+                      "productDefinition": "1-2 day specific guaranteed delivery by 6:00pm local delivery time",
+                      "processingCategory": "FLATS",
+                      "rateIndicator": "E4",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DEFE0XXXXC00700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTE0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "2 Days",
+                    "scheduleDeliveryDate": "2025-10-11",
+                    "guaranteedDelivery": true
+                  },
+                  "totalPrice": 29.45,
+                  "totalBasePrice": 29.45,
+                  "rates": [
+                    {
+                      "description": "Priority Mail Express Padded Flat Rate Envelope",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 29.45,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL_EXPRESS",
+                      "productName": "Priority Mail Express Padded Flat Rate Envelope",
+                      "productDefinition": "1-2 day specific guaranteed delivery by 6:00pm local delivery time",
+                      "processingCategory": "FLATS",
+                      "rateIndicator": "FP",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DEFE2XXXXC00700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTE0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "2 Days",
+                    "scheduleDeliveryDate": "2025-10-11",
+                    "guaranteedDelivery": true
+                  },
+                  "totalPrice": 29.25,
+                  "totalBasePrice": 29.25,
+                  "rates": [
+                    {
+                      "description": "Priority Mail Express Legal Flat Rate Envelope",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 29.25,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL_EXPRESS",
+                      "productName": "Priority Mail Express Legal Flat Rate Envelope",
+                      "productDefinition": "1-2 day specific guaranteed delivery by 6:00pm local delivery time",
+                      "processingCategory": "FLATS",
+                      "rateIndicator": "E6",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DEFE1XXXXC00700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTE0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "2 Days",
+                    "scheduleDeliveryDate": "2025-10-11",
+                    "guaranteedDelivery": true
+                  },
+                  "totalPrice": 29.25,
+                  "totalBasePrice": 29.25,
+                  "rates": [
+                    {
+                      "description": "Priority Mail Express Legal Flat Rate Envelope Holiday Delivery",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 29.25,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL_EXPRESS",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "FLATS",
+                      "rateIndicator": "E7",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DEFE1XXXXC00700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTE0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "2 Days",
+                    "scheduleDeliveryDate": "2025-10-11",
+                    "guaranteedDelivery": true
+                  },
+                  "totalPrice": 57.65,
+                  "totalBasePrice": 57.65,
+                  "rates": [
+                    {
+                      "description": "Priority Mail Express Machinable Single-piece",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 57.65,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL_EXPRESS",
+                      "productName": "Priority Mail Express",
+                      "productDefinition": "1-2 day specific guaranteed delivery by 6:00pm local delivery time",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "PA",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DEXX0XXXXC08020"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTE0EXXXCX0000"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "mailClass": "PRIORITY_MAIL",
+              "rateOptions": [
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 10.4,
+                  "totalBasePrice": 10.4,
+                  "rates": [
+                    {
+                      "description": "Priority Mail Flat Rate Envelope",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 10.4,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "Priority Mail Flat Rate Envelope",
+                      "productDefinition": "1-3 day specific delivery to all U.S. states and territories",
+                      "processingCategory": "FLATS",
+                      "rateIndicator": "FE",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DPFE0XXXXC00700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 11.2,
+                  "totalBasePrice": 11.2,
+                  "rates": [
+                    {
+                      "description": "Priority Mail Padded Flat Rate Envelope",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 11.2,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "Priority Mail Padded Flat Rate Envelope",
+                      "productDefinition": "1-3 day specific delivery to all U.S. states and territories",
+                      "processingCategory": "FLATS",
+                      "rateIndicator": "FP",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DPFE2XXXXC00700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 10.9,
+                  "totalBasePrice": 10.9,
+                  "rates": [
+                    {
+                      "description": "Priority Mail Legal Flat Rate Envelope",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 10.9,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "Priority Mail Legal Flat Rate Envelope",
+                      "productDefinition": "1-3 day specific delivery to all U.S. states and territories",
+                      "processingCategory": "FLATS",
+                      "rateIndicator": "FA",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DPFE1XXXXC00700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 19.2,
+                  "totalBasePrice": 19.2,
+                  "rates": [
+                    {
+                      "description": "Priority Mail Machinable Medium Flat Rate Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 19.2,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "Priority Mail Medium Flat Rate Box",
+                      "productDefinition": "1-3 day specific delivery to all U.S. states and territories",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "FB",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DPFB1XXXXC00700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 28.35,
+                  "totalBasePrice": 28.35,
+                  "rates": [
+                    {
+                      "description": "Priority Mail Machinable Large Flat Rate Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 28.35,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "Priority Mail Large Flat Rate Box",
+                      "productDefinition": "1-3 day specific delivery to all U.S. states and territories",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "PL",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DPFB0XXXXC00700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 27.1,
+                  "totalBasePrice": 27.1,
+                  "rates": [
+                    {
+                      "description": "Priority Mail Machinable Large Flat Rate Box APO/FPO/DPO",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 27.1,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "Priority Mail Large Flat Rate APO/FPO/DPO",
+                      "productDefinition": "1-3 day specific delivery to all U.S. states and territories",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "PM",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DPFB3XXXXC00700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 14.71,
+                  "totalBasePrice": 14.71,
+                  "rates": [
+                    {
+                      "description": "Priority Mail Machinable Single-piece",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 14.71,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "Priority Mail",
+                      "productDefinition": "1-3 day specific delivery to all U.S. states and territories",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "SP",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DPXX0XXXXC08020"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 14.71,
+                  "totalBasePrice": 14.71,
+                  "rates": [
+                    {
+                      "description": "Priority Mail Machinable Cubic Non-Soft Pack Tier 2",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 14.71,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "Priority Mail Cubic",
+                      "productDefinition": "1-3 day specific delivery for packages or padded envelopes weighing up to 20 lbs and measuring less than or equal to half a cubic foot in combined dimensions",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "CP",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DPUX2XXXXC08200"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 13.33,
+                  "totalBasePrice": 13.33,
+                  "rates": [
+                    {
+                      "description": "Priority Mail Machinable Cubic Soft Pack Tier 1",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 13.33,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "Priority Mail Cubic",
+                      "productDefinition": "1-3 day specific delivery for packages or padded envelopes weighing up to 20 lbs and measuring less than or equal to half a cubic foot in combined dimensions",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "P5",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DPUX1XXXXC08200"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 14.71,
+                  "totalBasePrice": 14.71,
+                  "rates": [
+                    {
+                      "description": "PMOD DDU Single-piece",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 14.71,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "Priority Mail",
+                      "productDefinition": "1-3 day specific delivery to all U.S. states and territories",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "SP",
+                      "destinationEntryFacilityType": "DESTINATION_DELIVERY_UNIT",
+                      "SKU": "DOXX0XXXXC08020"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 47.22,
+                  "totalBasePrice": 47.22,
+                  "rates": [
+                    {
+                      "description": "PMOD ADC Full Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 47.22,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O1",
+                      "destinationEntryFacilityType": "AREA_DISTRIBUTION_CENTER",
+                      "SKU": "DOXI0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 47.22,
+                  "totalBasePrice": 47.22,
+                  "rates": [
+                    {
+                      "description": "PMOD DNDC Full Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 47.22,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O1",
+                      "destinationEntryFacilityType": "DESTINATION_NETWORK_DISTRIBUTION_CENTER",
+                      "SKU": "DOXI0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 52.21,
+                  "totalBasePrice": 52.21,
+                  "rates": [
+                    {
+                      "description": "PMOD DDU Full Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 52.21,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O1",
+                      "destinationEntryFacilityType": "DESTINATION_DELIVERY_UNIT",
+                      "SKU": "DOXI0XXUXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 47.22,
+                  "totalBasePrice": 47.22,
+                  "rates": [
+                    {
+                      "description": "PMOD ASF Full Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 47.22,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O1",
+                      "destinationEntryFacilityType": "AUXILIARY_SERVICE_FACILITY",
+                      "SKU": "DOXI0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 47.22,
+                  "totalBasePrice": 47.22,
+                  "rates": [
+                    {
+                      "description": "PMOD DSCF Full Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 47.22,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O1",
+                      "destinationEntryFacilityType": "DESTINATION_SECTIONAL_CENTER_FACILITY",
+                      "SKU": "DOXI0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 28.27,
+                  "totalBasePrice": 28.27,
+                  "rates": [
+                    {
+                      "description": "PMOD ADC Half Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 28.27,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O2",
+                      "destinationEntryFacilityType": "AREA_DISTRIBUTION_CENTER",
+                      "SKU": "DOXH0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 28.27,
+                  "totalBasePrice": 28.27,
+                  "rates": [
+                    {
+                      "description": "PMOD DNDC Half Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 28.27,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O2",
+                      "destinationEntryFacilityType": "DESTINATION_NETWORK_DISTRIBUTION_CENTER",
+                      "SKU": "DOXH0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 31.72,
+                  "totalBasePrice": 31.72,
+                  "rates": [
+                    {
+                      "description": "PMOD DDU Half Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 31.72,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O2",
+                      "destinationEntryFacilityType": "DESTINATION_DELIVERY_UNIT",
+                      "SKU": "DOXH0XXUXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 28.27,
+                  "totalBasePrice": 28.27,
+                  "rates": [
+                    {
+                      "description": "PMOD ASF Half Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 28.27,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O2",
+                      "destinationEntryFacilityType": "AUXILIARY_SERVICE_FACILITY",
+                      "SKU": "DOXH0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 28.27,
+                  "totalBasePrice": 28.27,
+                  "rates": [
+                    {
+                      "description": "PMOD DSCF Half Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 28.27,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O2",
+                      "destinationEntryFacilityType": "DESTINATION_SECTIONAL_CENTER_FACILITY",
+                      "SKU": "DOXH0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 56.66,
+                  "totalBasePrice": 56.66,
+                  "rates": [
+                    {
+                      "description": "PMOD ADC Extended Managed Mail Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 56.66,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O3",
+                      "destinationEntryFacilityType": "AREA_DISTRIBUTION_CENTER",
+                      "SKU": "DOXJ0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 56.66,
+                  "totalBasePrice": 56.66,
+                  "rates": [
+                    {
+                      "description": "PMOD DNDC Extended Managed Mail Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 56.66,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O3",
+                      "destinationEntryFacilityType": "DESTINATION_NETWORK_DISTRIBUTION_CENTER",
+                      "SKU": "DOXJ0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 60.31,
+                  "totalBasePrice": 60.31,
+                  "rates": [
+                    {
+                      "description": "PMOD DDU Extended Managed Mail Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 60.31,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O3",
+                      "destinationEntryFacilityType": "DESTINATION_DELIVERY_UNIT",
+                      "SKU": "DOXJ0XXUXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 56.66,
+                  "totalBasePrice": 56.66,
+                  "rates": [
+                    {
+                      "description": "PMOD ASF Extended Managed Mail Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 56.66,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O3",
+                      "destinationEntryFacilityType": "AUXILIARY_SERVICE_FACILITY",
+                      "SKU": "DOXJ0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 56.66,
+                  "totalBasePrice": 56.66,
+                  "rates": [
+                    {
+                      "description": "PMOD DSCF Extended Managed Mail Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 56.66,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O3",
+                      "destinationEntryFacilityType": "DESTINATION_SECTIONAL_CENTER_FACILITY",
+                      "SKU": "DOXJ0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 84.7,
+                  "totalBasePrice": 84.7,
+                  "rates": [
+                    {
+                      "description": "PMOD ADC Flat Tub Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 84.7,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O4",
+                      "destinationEntryFacilityType": "AREA_DISTRIBUTION_CENTER",
+                      "SKU": "DOXK0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 84.7,
+                  "totalBasePrice": 84.7,
+                  "rates": [
+                    {
+                      "description": "PMOD DNDC Flat Tub Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 84.7,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O4",
+                      "destinationEntryFacilityType": "DESTINATION_NETWORK_DISTRIBUTION_CENTER",
+                      "SKU": "DOXK0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 91.55,
+                  "totalBasePrice": 91.55,
+                  "rates": [
+                    {
+                      "description": "PMOD DDU Flat Tub Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 91.55,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O4",
+                      "destinationEntryFacilityType": "DESTINATION_DELIVERY_UNIT",
+                      "SKU": "DOXK0XXUXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 84.7,
+                  "totalBasePrice": 84.7,
+                  "rates": [
+                    {
+                      "description": "PMOD ASF Flat Tub Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 84.7,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O4",
+                      "destinationEntryFacilityType": "AUXILIARY_SERVICE_FACILITY",
+                      "SKU": "DOXK0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "3 Days",
+                    "scheduleDeliveryDate": "2025-10-14",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 84.7,
+                  "totalBasePrice": 84.7,
+                  "rates": [
+                    {
+                      "description": "PMOD DSCF Flat Tub Tray Box",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 84.7,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PRIORITY_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "OPEN_AND_DISTRIBUTE",
+                      "rateIndicator": "O4",
+                      "destinationEntryFacilityType": "DESTINATION_SECTIONAL_CENTER_FACILITY",
+                      "SKU": "DOXK0XXXXC08700"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTP0EXXXCX0000"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "mailClass": "PARCEL_SELECT",
+              "rateOptions": [
+                {
+                  "commitment": {
+                    "name": "5 Days",
+                    "scheduleDeliveryDate": "2025-10-16",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 5.87,
+                  "totalBasePrice": 5.87,
+                  "rates": [
+                    {
+                      "description": "Parcel Select Machinable DDU Single-piece",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 5.87,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PARCEL_SELECT",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "SP",
+                      "destinationEntryFacilityType": "DESTINATION_DELIVERY_UNIT",
+                      "SKU": "DVXP0XXUXC00020"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTV0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "5 Days",
+                    "scheduleDeliveryDate": "2025-10-16",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 6.36,
+                  "totalBasePrice": 6.36,
+                  "rates": [
+                    {
+                      "description": "Parcel Select Machinable DSCF SCF",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 6.36,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PARCEL_SELECT",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "DE",
+                      "destinationEntryFacilityType": "DESTINATION_SECTIONAL_CENTER_FACILITY",
+                      "SKU": "DVXP0XXFXC00020"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTV0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "5 Days",
+                    "scheduleDeliveryDate": "2025-10-16",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 6.36,
+                  "totalBasePrice": 6.36,
+                  "rates": [
+                    {
+                      "description": "Parcel Select Machinable DHUB Single-piece",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 6.36,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "PARCEL_SELECT",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "SP",
+                      "destinationEntryFacilityType": "DESTINATION_SERVICE_HUB",
+                      "SKU": "DVXP0XXBXC00020"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTV0EXXXCX0000"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "mailClass": "BOUND_PRINTED_MATTER",
+              "rateOptions": [
+                {
+                  "commitment": {
+                    "name": "7 Days",
+                    "scheduleDeliveryDate": "2025-10-18",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 1.26,
+                  "totalBasePrice": 1.26,
+                  "rates": [
+                    {
+                      "description": "Bound Printed Matter Machinable DDU Presorted",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 1.12,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "BOUND_PRINTED_MATTER",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "PR",
+                      "destinationEntryFacilityType": "DESTINATION_DELIVERY_UNIT",
+                      "SKU": "DBPP0XXUXC00150"
+                    },
+                    {
+                      "description": "Bound Printed Matter Machinable DDU Presorted",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 0.072,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "BOUND_PRINTED_MATTER",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "PR",
+                      "destinationEntryFacilityType": "DESTINATION_DELIVERY_UNIT",
+                      "SKU": "DBPP0XXUXD00150"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTB0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "7 Days",
+                    "scheduleDeliveryDate": "2025-10-18",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 1.26,
+                  "totalBasePrice": 1.26,
+                  "rates": [
+                    {
+                      "description": "Bound Printed Matter Nonstandard DDU Presorted",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 1.12,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "BOUND_PRINTED_MATTER",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "NONSTANDARD",
+                      "rateIndicator": "PR",
+                      "destinationEntryFacilityType": "DESTINATION_DELIVERY_UNIT",
+                      "SKU": "DBPP0XXUXC00150"
+                    },
+                    {
+                      "description": "Bound Printed Matter Nonstandard DDU Presorted",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 0.072,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "BOUND_PRINTED_MATTER",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "NONSTANDARD",
+                      "rateIndicator": "PR",
+                      "destinationEntryFacilityType": "DESTINATION_DELIVERY_UNIT",
+                      "SKU": "DBPP0XXUXD00150"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTB0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "7 Days",
+                    "scheduleDeliveryDate": "2025-10-18",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 3.02,
+                  "totalBasePrice": 3.02,
+                  "rates": [
+                    {
+                      "description": "Bound Printed Matter Machinable Presorted",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 2.48,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "BOUND_PRINTED_MATTER",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "PR",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DBPP0XXNXC00150"
+                    },
+                    {
+                      "description": "Bound Printed Matter Machinable Presorted",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 0.272,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "BOUND_PRINTED_MATTER",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "PR",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DBPP0XXNXD00150"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTB0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "7 Days",
+                    "scheduleDeliveryDate": "2025-10-18",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 3.02,
+                  "totalBasePrice": 3.02,
+                  "rates": [
+                    {
+                      "description": "Bound Printed Matter Nonstandard Presorted",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 2.48,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "BOUND_PRINTED_MATTER",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "NONSTANDARD",
+                      "rateIndicator": "PR",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DBPP0XXNXC00150"
+                    },
+                    {
+                      "description": "Bound Printed Matter Nonstandard Presorted",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 0.272,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "BOUND_PRINTED_MATTER",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "NONSTANDARD",
+                      "rateIndicator": "PR",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DBPP0XXNXD00150"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTB0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "7 Days",
+                    "scheduleDeliveryDate": "2025-10-18",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 1.85,
+                  "totalBasePrice": 1.85,
+                  "rates": [
+                    {
+                      "description": "Bound Printed Matter Machinable DSCF Presorted",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 1.71,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "BOUND_PRINTED_MATTER",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "PR",
+                      "destinationEntryFacilityType": "DESTINATION_SECTIONAL_CENTER_FACILITY",
+                      "SKU": "DBPP0XXFXC00150"
+                    },
+                    {
+                      "description": "Bound Printed Matter Machinable DSCF Presorted",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 0.072,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "BOUND_PRINTED_MATTER",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "PR",
+                      "destinationEntryFacilityType": "DESTINATION_SECTIONAL_CENTER_FACILITY",
+                      "SKU": "DBPP0XXFXD00150"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTB0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "7 Days",
+                    "scheduleDeliveryDate": "2025-10-18",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 1.85,
+                  "totalBasePrice": 1.85,
+                  "rates": [
+                    {
+                      "description": "Bound Printed Matter Nonstandard DSCF Presorted",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 1.71,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "BOUND_PRINTED_MATTER",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "NONSTANDARD",
+                      "rateIndicator": "PR",
+                      "destinationEntryFacilityType": "DESTINATION_SECTIONAL_CENTER_FACILITY",
+                      "SKU": "DBPP0XXFXC00150"
+                    },
+                    {
+                      "description": "Bound Printed Matter Nonstandard DSCF Presorted",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 0.072,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "BOUND_PRINTED_MATTER",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "NONSTANDARD",
+                      "rateIndicator": "PR",
+                      "destinationEntryFacilityType": "DESTINATION_SECTIONAL_CENTER_FACILITY",
+                      "SKU": "DBPP0XXFXD00150"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTB0EXXXCX0000"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "mailClass": "USPS_GROUND_ADVANTAGE",
+              "rateOptions": [
+                {
+                  "commitment": {
+                    "name": "5 Days",
+                    "scheduleDeliveryDate": "2025-10-16",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 11.85,
+                  "totalBasePrice": 11.85,
+                  "rates": [
+                    {
+                      "description": "USPS Ground Advantage Machinable Single-piece",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 11.85,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "USPS_GROUND_ADVANTAGE",
+                      "productName": "USPS Ground Advantage",
+                      "productDefinition": "2-5 day specific delivery, perfect for packages weighing 1 ounce up to 70 lbs",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "SP",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DUXP0XXXXC08020"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTU0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "5 Days",
+                    "scheduleDeliveryDate": "2025-10-16",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 11.15,
+                  "totalBasePrice": 11.15,
+                  "rates": [
+                    {
+                      "description": "USPS Ground Advantage Machinable Cubic Non-Soft Pack Tier 2",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 11.15,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "USPS_GROUND_ADVANTAGE",
+                      "productName": "USPS Ground Advantage Cubic",
+                      "productDefinition": "2-5 day specific delivery for packages or padded envelopes weighing up to 20 lbs and measuring less than or equal one cubic foot in combined dimensions",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "CP",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DUUP2XXXXC08200"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTU0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "5 Days",
+                    "scheduleDeliveryDate": "2025-10-16",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 9.7,
+                  "totalBasePrice": 9.7,
+                  "rates": [
+                    {
+                      "description": "USPS Ground Advantage Machinable Cubic Soft Pack Tier 1",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 9.7,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "USPS_GROUND_ADVANTAGE",
+                      "productName": "USPS Ground Advantage Cubic",
+                      "productDefinition": "2-5 day specific delivery for packages or padded envelopes weighing up to 20 lbs and measuring less than or equal one cubic foot in combined dimensions",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "P5",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DUUP1XXXXC08200"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTU0EXXXCX0000"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "mailClass": "MEDIA_MAIL",
+              "rateOptions": [
+                {
+                  "commitment": {
+                    "name": "7 Days",
+                    "scheduleDeliveryDate": "2025-10-18",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 5.22,
+                  "totalBasePrice": 5.22,
+                  "rates": [
+                    {
+                      "description": "Media Mail Machinable Single-piece",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 5.22,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "MEDIA_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "MACHINABLE",
+                      "rateIndicator": "SP",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DMXX0XXXUC00020"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTM0EXXXCX0000"
+                    }
+                  ]
+                },
+                {
+                  "commitment": {
+                    "name": "7 Days",
+                    "scheduleDeliveryDate": "2025-10-18",
+                    "guaranteedDelivery": false
+                  },
+                  "totalPrice": 5.22,
+                  "totalBasePrice": 5.22,
+                  "rates": [
+                    {
+                      "description": "Media Mail Nonstandard Single-piece",
+                      "startDate": "2025-10-05",
+                      "endDate": "",
+                      "price": 5.22,
+                      "zone": "08",
+                      "weight": 2.0,
+                      "dimensionalWeight": 0.0,
+                      "dimWeight": 0.0,
+                      "fees": [],
+                      "priceType": "COMMERCIAL",
+                      "mailClass": "MEDIA_MAIL",
+                      "productName": "",
+                      "productDefinition": "",
+                      "processingCategory": "NONSTANDARD",
+                      "rateIndicator": "SP",
+                      "destinationEntryFacilityType": "NONE",
+                      "SKU": "DMXX0XXXUC00020"
+                    }
+                  ],
+                  "extraServices": [
+                    {
+                      "name": "USPS Tracking",
+                      "price": 0.0,
+                      "extraService": "920",
+                      "priceType": "COMMERCIAL",
+                      "warnings": [],
+                      "SKU": "DXTM0EXXXCX0000"
+                    }
+                  ]
+                }
+              ]
+            }
+          ],
+          "priceType": "COMMERCIAL"
+        }
+      ]
+    }
+  },
+  "errors": []
+}

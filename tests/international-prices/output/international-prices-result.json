@@ -1,0 +1,795 @@
+{
+  "timestamp": "2025-10-09T15:14:23.608618Z",
+  "envFile": ".env.local",
+  "baseUrl": "https://apis-tem.usps.com/",
+  "authUrl": "https://apis-tem.usps.com/oauth2/v3/token",
+  "baseRatesUrl": "https://apis-tem.usps.com/international-prices/v3/base-rates/search",
+  "baseRatesListUrl": "https://apis-tem.usps.com/international-prices/v3/base-rates-list/search",
+  "extraServiceUrl": "https://apis-tem.usps.com/international-prices/v3/extra-service-rates/search",
+  "totalRatesUrl": "https://apis-tem.usps.com/international-prices/v3/total-rates/search",
+  "auth": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json",
+      "Content-Length": "2581",
+      "x-amzn-RequestId": "8e477ab6-7ff7-40a0-b482-46b94be31515",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Origin, Accept, Content-Type, Authorization, X-Forward-For, X-Requested-With, User-Agent",
+      "x-amzn-Remapped-content-length": "2581",
+      "x-request-id": "80447bbd-cb5a-4b92-9ef1-9ccfec41822f",
+      "x-amz-apigw-id": "SL2kwHYSIAMEVRw=",
+      "Access-Control-Allow-Methods": "GET, POST",
+      "Access-Control-Max-Age": "86400",
+      "x-amzn-Remapped-date": "Thu, 09 Oct 2025 15:14:25 GMT",
+      "Access-Control-Allow-Credentials": "true",
+      "Cache-Control": "max-age=0, no-cache, no-store",
+      "Pragma": "no-cache",
+      "Date": "Thu, 09 Oct 2025 15:14:25 GMT",
+      "Connection": "close",
+      "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains ; preload",
+      "Akamai-GRN": "0.9f6e3f17.1760022864.1c45b0ed"
+    },
+    "body": {
+      "access_token": "eyJraWQiOiJIdWpzX2F6UnFJUzBpSE5YNEZIRk96eUwwdjE4RXJMdjNyZDBoalpNUnJFIiwidHlwIjoiSldUIiwiYWxnIjoiUlMyNTYifQ.eyJlbnRpdGxlbWVudHMiOltdLCJzdWIiOiI0NTI0MzE5MDQiLCJjcmlkIjoiMzk4NzE1NDIiLCJzdWJfaWQiOiI0NTI0MzE5MDQiLCJyb2xlcyI6W10sInBheW1lbnRfYWNjb3VudHMiOnsicGVybWl0cyI6W3sicGVybWl0TnVtYmVyIjoiW10iLCJwZXJtaXRaSVAiOiIwMDAifV19LCJpc3MiOiJodHRwczovL2FwaXMtdGVtLnVzcHMuY29tIiwiY29udHJhY3RzIjp7InBheW1lbnRBY2NvdW50cyI6e30sInBlcm1pdHMiOlt7InBlcm1pdE51bWJlciI6IltdIiwicGVybWl0WklQIjoiMDAwIn1dfSwiYXVkIjpbInBheW1lbnRzIiwicHJpY2VzIiwic3Vic2NyaXB0aW9ucy10cmFja2luZyIsIm9yZ2FuaXphdGlvbnMiXSwiYXpwIjoiU1RjOXBobklqVUpPU0kzTEpjdmxveXE1b0UyQVRkZDc1SjRvMW5pNzJWcFRRekFhIiwibWFpbF9vd25lcnMiOlt7ImNyaWQiOiIzOTg3MTU0MiIsIm1pZHMiOiIifV0sInNjb3BlIjoiZG9tZXN0aWMtcHJpY2VzICBvYXV0aDItb2lkYyBhZGRyZXNzZXMgaW50ZXJuYXRpb25hbC1wcmljZXMgIHVzcHM6cGF5bWVudF9tZXRob2RzIG9wZW5pZCBzZXJ2aWNlLXN0YW5kYXJkcy1maWxlcyBzZXJ2aWNlLXN0YW5kYXJkcyBsb2NhdGlvbnMgIHVzcHM6TUlEcyBzaGlwbWVudHMiLCJjb21wYW55X25hbWUiOiJDTE9VRCA5IEVYUFJFU1MgTExDIiwiZXhwIjoxNzYwMDUxNjY1LCJpYXQiOjE3NjAwMjI4NjUsImp0aSI6ImYyYWQ1MzI1LTAwZmEtNDE4My04YTZlLWUzYjIyZjg3YTdiZiJ9.KLzQIr3OuaDgfieo5tXFXJWIKtZ4YuBvUAYYKHpXiecPm-4vLBz280_dUqdNdxz24I4I37SB_QGfdThR3SDfOulUbF-GGEcvcDrGmm91wY02FU5uIMQlFSFRkxDB6J79kfHrwFIrVj5Cot0zzIfjp34-XR9a-c6dpvG4_zOwKKwSFVgbpxMQQyo5Ma026nNQwe4NgBLv8ZdnVCpFln-ySGPWjnqTHXPSnjrdAd75LbZA9NJcLhwTF8kmQid13yXaxnmQoOzWU4momiV8yZMu-a4VyPDcW-WOGNAaFi3v6l4cjxq6eVwQ-cKFwC2QF_FahJl_GzQhs3g1GdIfmpKwgw",
+      "token_type": "Bearer",
+      "issued_at": 1760022865411,
+      "expires_in": 28799,
+      "status": "approved",
+      "scope": "domestic-prices  oauth2-oidc addresses international-prices  usps:payment_methods openid service-standards-files service-standards locations  usps:MIDs shipments",
+      "issuer": "https://apis-tem.usps.com",
+      "client_id": "STc9phnIjUJOSI3LJcvloyq5oE2ATdd75J4o1ni72VpTQzAa",
+      "application_name": "Cloud9_USPS_Integration",
+      "api_products": "[Public Access I]",
+      "public_key": "LS0tLS1CRUdJTiBQVUJMSUMgS0VZLS0tLS1NSUlCSWpBTkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQXVJSzRaUzd0T05QU0FMMzBHTzRPa3Q3N3Y5cHlIUkdPaE5DWDJKUkxMcEtFamNtUjFCMHg1TkszMmZNWlJoSjhTV0pVM05OMm5SYkpNcEladFZUSW51YWRjSENNaFNGMi9QRmRPaUVLZzgvZkRhYS9LemtnTXVJQjhudi9Nc01jMjZkeXovdjJRWHRLVU5HSnBoK2k0cTg2Y2xkbjlzSnM1YVZrbHFyREFSL1NpNEpIZEdqOVVTekdmdTg3bFNhUnpTVnZFMkxTbkpFWFY1ZVJpQ0pxbk90aTkvUEw5ek95UDlkQmJSZjBaQS9iWjZidFdleklwSzJuOFJhN0ZpcEZJZE9uYUkvYXdoY0hIVURNenlKT2NLYU4zSkRZZDhMTS83MGpCUEF4NUwrRHBUVFVHeVI5WFRXSThldVJEU2gveVU2MDlLN3dybDJRZ2NRMFl6N2hsUUlEQVFBQi0tLS0tRU5EIFBVQkxJQyBLRVktLS0tLQ=="
+    }
+  },
+  "baseRates": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json",
+      "Content-Length": "522",
+      "x-amzn-RequestId": "8bec51d5-4f26-409c-a29d-f30876e036f9",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Origin, Accept, Content-Type, Authorization",
+      "x-amzn-Remapped-content-length": "522",
+      "x-request-id": "8afd288d-560f-4eca-9939-cf8bc01eeda9",
+      "x-amz-apigw-id": "SL2lAHxlIAMEpMg=",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Max-Age": "3628800",
+      "x-amzn-Remapped-date": "Thu, 09 Oct 2025 15:14:26 GMT",
+      "Access-Control-Allow-Credentials": "true",
+      "Cache-Control": "max-age=0, no-cache, no-store",
+      "Pragma": "no-cache",
+      "Date": "Thu, 09 Oct 2025 15:14:27 GMT",
+      "Connection": "close",
+      "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains ; preload",
+      "Akamai-GRN": "0.a66e3f17.1760022865.1a428d48"
+    },
+    "body": {
+      "rates": [
+        {
+          "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+          "priceType": "COMMERCIAL_BASE",
+          "zone": "01",
+          "rateIndicator": "SP",
+          "processingCategory": "MACHINABLE",
+          "dimWeight": 0,
+          "fees": [],
+          "warnings": [
+            {
+              "warningCode": "001",
+              "warningDescription": "Contract rate not found for request. Published rate returned."
+            }
+          ],
+          "startDate": "2025-07-13",
+          "endDate": "2025-10-04",
+          "SKU": "IPXX0XXXXB01020",
+          "price": 44.18,
+          "destinationEntryFacilityType": "NONE",
+          "weight": 2,
+          "description": "Priority Mail International Machinable Single-piece"
+        }
+      ],
+      "totalBasePrice": 44.18
+    }
+  },
+  "baseRatesList": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json",
+      "Content-Length": "3242",
+      "x-amzn-RequestId": "fa587c6e-8310-46b2-8e28-6fb3b655b557",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Origin, Accept, Content-Type, Authorization",
+      "x-amzn-Remapped-content-length": "3242",
+      "x-request-id": "e8b8a213-9373-4418-8f06-3a94d152e286",
+      "x-amz-apigw-id": "SL2lFGj3oAMEjJQ=",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Max-Age": "3628800",
+      "x-amzn-Remapped-date": "Thu, 09 Oct 2025 15:14:27 GMT",
+      "Access-Control-Allow-Credentials": "true",
+      "Cache-Control": "max-age=0, no-cache, no-store",
+      "Pragma": "no-cache",
+      "Date": "Thu, 09 Oct 2025 15:14:27 GMT",
+      "Connection": "close",
+      "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains ; preload",
+      "Akamai-GRN": "0.a66e3f17.1760022867.1a429219"
+    },
+    "body": {
+      "rateOptions": [
+        {
+          "rates": [
+            {
+              "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+              "priceType": "COMMERCIAL_BASE",
+              "dimWeight": 0,
+              "zone": "01",
+              "rateIndicator": "FE",
+              "processingCategory": "FLATS",
+              "fees": [],
+              "startDate": "2025-10-05",
+              "endDate": "",
+              "productName": "",
+              "productDefinition": "",
+              "SKU": "IPFE0XXXXB01040",
+              "price": 29.66,
+              "weight": 2,
+              "destinationEntryFacilityType": "INTERNATIONAL_SERVICE_CENTER",
+              "description": "Priority Mail International ISC Flat Rate Envelope"
+            }
+          ],
+          "totalBasePrice": 29.66
+        },
+        {
+          "rates": [
+            {
+              "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+              "priceType": "COMMERCIAL_BASE",
+              "dimWeight": 0,
+              "zone": "01",
+              "rateIndicator": "PL",
+              "processingCategory": "MACHINABLE",
+              "fees": [],
+              "startDate": "2025-10-05",
+              "endDate": "",
+              "productName": "",
+              "productDefinition": "",
+              "SKU": "IPFB0XXXXB01200",
+              "price": 73.24,
+              "weight": 2,
+              "destinationEntryFacilityType": "INTERNATIONAL_SERVICE_CENTER",
+              "description": "Priority Mail International Machinable ISC Large Flat Rate Box"
+            }
+          ],
+          "totalBasePrice": 73.24
+        },
+        {
+          "rates": [
+            {
+              "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+              "priceType": "COMMERCIAL_BASE",
+              "dimWeight": 0,
+              "zone": "01",
+              "rateIndicator": "FB",
+              "processingCategory": "MACHINABLE",
+              "fees": [],
+              "startDate": "2025-10-05",
+              "endDate": "",
+              "productName": "",
+              "productDefinition": "",
+              "SKU": "IPFB1XXXXB01200",
+              "price": 58.06,
+              "weight": 2,
+              "destinationEntryFacilityType": "INTERNATIONAL_SERVICE_CENTER",
+              "description": "Priority Mail International Machinable ISC Medium Flat Rate Box"
+            }
+          ],
+          "totalBasePrice": 58.06
+        },
+        {
+          "rates": [
+            {
+              "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+              "priceType": "COMMERCIAL_BASE",
+              "dimWeight": 0,
+              "zone": "01",
+              "rateIndicator": "FP",
+              "processingCategory": "MACHINABLE",
+              "fees": [],
+              "startDate": "2025-10-05",
+              "endDate": "",
+              "productName": "",
+              "productDefinition": "",
+              "SKU": "IPFE2XXXXB01040",
+              "price": 29.66,
+              "weight": 2,
+              "destinationEntryFacilityType": "INTERNATIONAL_SERVICE_CENTER",
+              "description": "Priority Mail International Machinable ISC Padded Flat Rate Envelope"
+            }
+          ],
+          "totalBasePrice": 29.66
+        },
+        {
+          "rates": [
+            {
+              "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+              "priceType": "COMMERCIAL_BASE",
+              "dimWeight": 0,
+              "zone": "01",
+              "rateIndicator": "SP",
+              "processingCategory": "FLATS",
+              "fees": [],
+              "startDate": "2025-10-05",
+              "endDate": "",
+              "productName": "",
+              "productDefinition": "",
+              "SKU": "IPXX0XXXXB01020",
+              "price": 44.18,
+              "weight": 2,
+              "destinationEntryFacilityType": "INTERNATIONAL_SERVICE_CENTER",
+              "description": "Priority Mail International ISC Single-piece"
+            }
+          ],
+          "totalBasePrice": 44.18
+        },
+        {
+          "rates": [
+            {
+              "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+              "priceType": "COMMERCIAL_BASE",
+              "dimWeight": 0,
+              "zone": "01",
+              "rateIndicator": "SP",
+              "processingCategory": "MACHINABLE",
+              "fees": [],
+              "startDate": "2025-10-05",
+              "endDate": "",
+              "productName": "",
+              "productDefinition": "",
+              "SKU": "IPXX0XXXXB01020",
+              "price": 44.18,
+              "weight": 2,
+              "destinationEntryFacilityType": "INTERNATIONAL_SERVICE_CENTER",
+              "description": "Priority Mail International Machinable ISC Single-piece"
+            }
+          ],
+          "totalBasePrice": 44.18
+        },
+        {
+          "rates": [
+            {
+              "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+              "priceType": "COMMERCIAL_BASE",
+              "dimWeight": 0,
+              "zone": "01",
+              "rateIndicator": "FA",
+              "processingCategory": "FLATS",
+              "fees": [],
+              "startDate": "2025-10-05",
+              "endDate": "",
+              "productName": "",
+              "productDefinition": "",
+              "SKU": "IPFE1XXXXB01040",
+              "price": 29.66,
+              "weight": 2,
+              "destinationEntryFacilityType": "INTERNATIONAL_SERVICE_CENTER",
+              "description": "Priority Mail International ISC Legal Flat Rate Envelope"
+            }
+          ],
+          "totalBasePrice": 29.66
+        }
+      ]
+    }
+  },
+  "extraServiceRates": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json",
+      "Content-Length": "400",
+      "x-amzn-RequestId": "a462a535-32c1-48be-8404-71ebca5934b5",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Origin, Accept, Content-Type, Authorization",
+      "x-amzn-Remapped-content-length": "400",
+      "x-request-id": "2478630f-3dbb-4401-9877-f1aa9818c02a",
+      "x-amz-apigw-id": "SL2lNE3xIAMESQw=",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Max-Age": "3628800",
+      "x-amzn-Remapped-date": "Thu, 09 Oct 2025 15:14:28 GMT",
+      "Access-Control-Allow-Credentials": "true",
+      "Cache-Control": "max-age=0, no-cache, no-store",
+      "Pragma": "no-cache",
+      "Date": "Thu, 09 Oct 2025 15:14:28 GMT",
+      "Connection": "close",
+      "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains ; preload",
+      "Akamai-GRN": "0.9f6e3f17.1760022868.1c45bfbf"
+    },
+    "body": {
+      "extraServices": [
+        {
+          "SKU": "IXIP0XXXXCX0300",
+          "priceType": "COMMERCIAL",
+          "price": 11.85,
+          "extraService": 930,
+          "name": "Insurance <= $500",
+          "warnings": []
+        }
+      ]
+    }
+  },
+  "totalRates": {
+    "status": 200,
+    "headers": {
+      "Content-Type": "application/json",
+      "Content-Length": "8457",
+      "x-amzn-RequestId": "334f7f8d-b130-4143-8425-4837737eb9ab",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Headers": "Origin, Accept, Content-Type, Authorization",
+      "x-amzn-Remapped-content-length": "8457",
+      "x-request-id": "8fc6954b-091c-42f5-92d9-108a75324220",
+      "x-amz-apigw-id": "SL2lJEIhoAMEUnQ=",
+      "Access-Control-Allow-Methods": "POST, OPTIONS",
+      "Access-Control-Max-Age": "3628800",
+      "x-amzn-Remapped-date": "Thu, 09 Oct 2025 15:14:27 GMT",
+      "Access-Control-Allow-Credentials": "true",
+      "Cache-Control": "max-age=0, no-cache, no-store",
+      "Pragma": "no-cache",
+      "Date": "Thu, 09 Oct 2025 15:14:27 GMT",
+      "Connection": "close",
+      "Strict-Transport-Security": "max-age=31536000 ; includeSubDomains ; preload",
+      "Akamai-GRN": "0.9f6e3f17.1760022867.1c45be7c"
+    },
+    "body": {
+      "rateOptions": [
+        {
+          "totalBasePrice": 29.66,
+          "rates": [
+            {
+              "description": "Priority Mail International ISC Flat Rate Envelope",
+              "priceType": "COMMERCIAL_BASE",
+              "price": 29.66,
+              "weight": 2.0,
+              "dimWeight": 0.0,
+              "fees": [],
+              "startDate": "2025-10-05",
+              "endDate": "",
+              "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+              "zone": "01",
+              "productName": "",
+              "productDefinition": "",
+              "processingCategory": "FLATS",
+              "rateIndicator": "FE",
+              "destinationEntryFacilityType": "INTERNATIONAL_SERVICE_CENTER",
+              "SKU": "IPFE0XXXXB01040"
+            }
+          ],
+          "extraServices": [
+            {
+              "extraService": "925",
+              "name": "Priority Mail Express Merchandise Insurance",
+              "priceType": "COMMERCIAL",
+              "price": 11.85,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXIP0XXXXCX0300"
+            },
+            {
+              "extraService": "930",
+              "name": "Insurance <= $500",
+              "priceType": "COMMERCIAL",
+              "price": 11.85,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXIP0XXXXCX0300"
+            },
+            {
+              "extraService": "940",
+              "name": "Registered Mail",
+              "priceType": "COMMERCIAL",
+              "price": 21.75,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXGP0XXXXCX0000"
+            }
+          ]
+        },
+        {
+          "totalBasePrice": 73.24,
+          "rates": [
+            {
+              "description": "Priority Mail International Machinable ISC Large Flat Rate Box",
+              "priceType": "COMMERCIAL_BASE",
+              "price": 73.24,
+              "weight": 2.0,
+              "dimWeight": 0.0,
+              "fees": [],
+              "startDate": "2025-10-05",
+              "endDate": "",
+              "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+              "zone": "01",
+              "productName": "",
+              "productDefinition": "",
+              "processingCategory": "MACHINABLE",
+              "rateIndicator": "PL",
+              "destinationEntryFacilityType": "INTERNATIONAL_SERVICE_CENTER",
+              "SKU": "IPFB0XXXXB01200"
+            }
+          ],
+          "extraServices": [
+            {
+              "extraService": "925",
+              "name": "Priority Mail Express Merchandise Insurance",
+              "priceType": "COMMERCIAL",
+              "price": 11.85,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXIP0XXXXCX0300"
+            },
+            {
+              "extraService": "930",
+              "name": "Insurance <= $500",
+              "priceType": "COMMERCIAL",
+              "price": 11.85,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXIP0XXXXCX0300"
+            },
+            {
+              "extraService": "940",
+              "name": "Registered Mail",
+              "priceType": "COMMERCIAL",
+              "price": 21.75,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXGP0XXXXCX0000"
+            }
+          ]
+        },
+        {
+          "totalBasePrice": 58.06,
+          "rates": [
+            {
+              "description": "Priority Mail International Machinable ISC Medium Flat Rate Box",
+              "priceType": "COMMERCIAL_BASE",
+              "price": 58.06,
+              "weight": 2.0,
+              "dimWeight": 0.0,
+              "fees": [],
+              "startDate": "2025-10-05",
+              "endDate": "",
+              "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+              "zone": "01",
+              "productName": "",
+              "productDefinition": "",
+              "processingCategory": "MACHINABLE",
+              "rateIndicator": "FB",
+              "destinationEntryFacilityType": "INTERNATIONAL_SERVICE_CENTER",
+              "SKU": "IPFB1XXXXB01200"
+            }
+          ],
+          "extraServices": [
+            {
+              "extraService": "925",
+              "name": "Priority Mail Express Merchandise Insurance",
+              "priceType": "COMMERCIAL",
+              "price": 11.85,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXIP0XXXXCX0300"
+            },
+            {
+              "extraService": "930",
+              "name": "Insurance <= $500",
+              "priceType": "COMMERCIAL",
+              "price": 11.85,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXIP0XXXXCX0300"
+            },
+            {
+              "extraService": "940",
+              "name": "Registered Mail",
+              "priceType": "COMMERCIAL",
+              "price": 21.75,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXGP0XXXXCX0000"
+            }
+          ]
+        },
+        {
+          "totalBasePrice": 29.66,
+          "rates": [
+            {
+              "description": "Priority Mail International Machinable ISC Padded Flat Rate Envelope",
+              "priceType": "COMMERCIAL_BASE",
+              "price": 29.66,
+              "weight": 2.0,
+              "dimWeight": 0.0,
+              "fees": [],
+              "startDate": "2025-10-05",
+              "endDate": "",
+              "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+              "zone": "01",
+              "productName": "",
+              "productDefinition": "",
+              "processingCategory": "MACHINABLE",
+              "rateIndicator": "FP",
+              "destinationEntryFacilityType": "INTERNATIONAL_SERVICE_CENTER",
+              "SKU": "IPFE2XXXXB01040"
+            }
+          ],
+          "extraServices": [
+            {
+              "extraService": "925",
+              "name": "Priority Mail Express Merchandise Insurance",
+              "priceType": "COMMERCIAL",
+              "price": 11.85,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXIP0XXXXCX0300"
+            },
+            {
+              "extraService": "930",
+              "name": "Insurance <= $500",
+              "priceType": "COMMERCIAL",
+              "price": 11.85,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXIP0XXXXCX0300"
+            },
+            {
+              "extraService": "940",
+              "name": "Registered Mail",
+              "priceType": "COMMERCIAL",
+              "price": 21.75,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXGP0XXXXCX0000"
+            }
+          ]
+        },
+        {
+          "totalBasePrice": 44.18,
+          "rates": [
+            {
+              "description": "Priority Mail International ISC Single-piece",
+              "priceType": "COMMERCIAL_BASE",
+              "price": 44.18,
+              "weight": 2.0,
+              "dimWeight": 0.0,
+              "fees": [],
+              "startDate": "2025-10-05",
+              "endDate": "",
+              "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+              "zone": "01",
+              "productName": "",
+              "productDefinition": "",
+              "processingCategory": "FLATS",
+              "rateIndicator": "SP",
+              "destinationEntryFacilityType": "INTERNATIONAL_SERVICE_CENTER",
+              "SKU": "IPXX0XXXXB01020"
+            }
+          ],
+          "extraServices": [
+            {
+              "extraService": "925",
+              "name": "Priority Mail Express Merchandise Insurance",
+              "priceType": "COMMERCIAL",
+              "price": 11.85,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXIP0XXXXCX0300"
+            },
+            {
+              "extraService": "930",
+              "name": "Insurance <= $500",
+              "priceType": "COMMERCIAL",
+              "price": 11.85,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXIP0XXXXCX0300"
+            },
+            {
+              "extraService": "940",
+              "name": "Registered Mail",
+              "priceType": "COMMERCIAL",
+              "price": 21.75,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXGP0XXXXCX0000"
+            }
+          ]
+        },
+        {
+          "totalBasePrice": 44.18,
+          "rates": [
+            {
+              "description": "Priority Mail International Machinable ISC Single-piece",
+              "priceType": "COMMERCIAL_BASE",
+              "price": 44.18,
+              "weight": 2.0,
+              "dimWeight": 0.0,
+              "fees": [],
+              "startDate": "2025-10-05",
+              "endDate": "",
+              "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+              "zone": "01",
+              "productName": "",
+              "productDefinition": "",
+              "processingCategory": "MACHINABLE",
+              "rateIndicator": "SP",
+              "destinationEntryFacilityType": "INTERNATIONAL_SERVICE_CENTER",
+              "SKU": "IPXX0XXXXB01020"
+            }
+          ],
+          "extraServices": [
+            {
+              "extraService": "925",
+              "name": "Priority Mail Express Merchandise Insurance",
+              "priceType": "COMMERCIAL",
+              "price": 11.85,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXIP0XXXXCX0300"
+            },
+            {
+              "extraService": "930",
+              "name": "Insurance <= $500",
+              "priceType": "COMMERCIAL",
+              "price": 11.85,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXIP0XXXXCX0300"
+            },
+            {
+              "extraService": "940",
+              "name": "Registered Mail",
+              "priceType": "COMMERCIAL",
+              "price": 21.75,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXGP0XXXXCX0000"
+            }
+          ]
+        },
+        {
+          "totalBasePrice": 29.66,
+          "rates": [
+            {
+              "description": "Priority Mail International ISC Legal Flat Rate Envelope",
+              "priceType": "COMMERCIAL_BASE",
+              "price": 29.66,
+              "weight": 2.0,
+              "dimWeight": 0.0,
+              "fees": [],
+              "startDate": "2025-10-05",
+              "endDate": "",
+              "mailClass": "PRIORITY_MAIL_INTERNATIONAL",
+              "zone": "01",
+              "productName": "",
+              "productDefinition": "",
+              "processingCategory": "FLATS",
+              "rateIndicator": "FA",
+              "destinationEntryFacilityType": "INTERNATIONAL_SERVICE_CENTER",
+              "SKU": "IPFE1XXXXB01040"
+            }
+          ],
+          "extraServices": [
+            {
+              "extraService": "925",
+              "name": "Priority Mail Express Merchandise Insurance",
+              "priceType": "COMMERCIAL",
+              "price": 11.85,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXIP0XXXXCX0300"
+            },
+            {
+              "extraService": "930",
+              "name": "Insurance <= $500",
+              "priceType": "COMMERCIAL",
+              "price": 11.85,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXIP0XXXXCX0300"
+            },
+            {
+              "extraService": "940",
+              "name": "Registered Mail",
+              "priceType": "COMMERCIAL",
+              "price": 21.75,
+              "warnings": [
+                {
+                  "warningCode": "001",
+                  "warningDescription": "Contract rate not found for request. Published rate returned."
+                }
+              ],
+              "SKU": "IXGP0XXXXCX0000"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "errors": []
+}
